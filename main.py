@@ -14,7 +14,6 @@ def player_turn():
             elif user_choice == "r":
                 print(f"You chose Rock")
             return user_choice
-
         else:
             print(f"Invalid Input. Please choose r, p, or s.")
 
@@ -31,12 +30,12 @@ def computer_turn():
 def determine_winner():
     user_pick = player_turn()
     comp_pick = computer_turn()
-
     if user_pick == comp_pick:
         print(f"It was a tie!")
     elif user_pick == "s" and comp_pick == "p" or user_pick == "p" and comp_pick == "r" or user_pick == "r" and comp_pick == "s":
         print(f"You have won the game!")
     else: print(f"You have lost. The computer won!")
+
 def main():
     while True:
         determine_winner()
